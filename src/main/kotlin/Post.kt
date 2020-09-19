@@ -1,4 +1,4 @@
-import Attachments.Attachment
+import attachments.Attachment
 
 data class Post(
     var id: Int,

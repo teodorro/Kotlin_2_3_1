@@ -1,4 +1,4 @@
-import Attachments.*
+import attachments.*
 
 fun main() {
     WallService.add(getPost1(1))
@@ -8,17 +8,13 @@ fun main() {
 }
 
 fun getPost1(id: Int): Post{
-    val att: AttachmentAudio = AttachmentAudio("audio", Audio())
-    var ar: Array<AttachmentAudio>
-
-
     return Post(id, 2, 3, 4, 5, "asd", 6, 7, true,
         Comments(1, true, true, true, true),
         "asd",
         Likes(1, true, true, true),
         Views(2), "qw",
         PostSource("zxc", "xcv", "cvb", "vbn"),
-        arrayOf(AttachmentAudio("audio", Audio())),
+        arrayOf(AudioAttachment("audio", Audio())),
         Geo("qwe", "1:2", Place(1, "ert", 2, 3, 4, "rty", 5, 6, 7, 8, 9, "tyu")),
         3,
         null,
@@ -32,7 +28,7 @@ fun getPost2(id: Int): Post{
         Likes(11, true, true, true),
         Views(12), "1qw",
         PostSource("zxc", "xcv", "cvb", "vbn"),
-        arrayOf(AttachmentVideo("video", Video())),
+        arrayOf(VideoAttachment("video", Video())),
         Geo("qwe", "1:2", Place(11, "ert", 12, 13, 14, "rty", 15, 16, 17, 18, 19, "tyu")),
         13,
         null,
